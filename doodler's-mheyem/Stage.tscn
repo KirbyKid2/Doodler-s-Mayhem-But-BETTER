@@ -12,10 +12,10 @@ script = ExtResource("1_4ubfd")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1983234411]
 
 [node name="Host" type="Button" parent="CanvasLayer" unique_id=1183128214]
-offset_left = 41.0
-offset_top = 54.0
-offset_right = 433.0
-offset_bottom = 101.0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 418.0
+offset_bottom = 71.0
 text = "Idk start yo game yo phone linging start the game
 "
 

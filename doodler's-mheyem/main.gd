@@ -1,6 +1,6 @@
 extends Node2D
 
-const PLAYER_CONTROLLER = preload("uid://jyvrun44khf0")
+const PLAYER_CONTROLLER = preload("uid://jyvrun44khf0") 
 
 var players: Array[CharacterBody2D]
 
@@ -25,12 +25,10 @@ func initialize_player(player: CharacterBody2D) -> void:
 	for other in players:
 		player.add_collision_exception_with(other)
 	players.append(player)
-	
-
 
 func _on_host_pressed() -> void:
 	Networking.host_lobby()
-	
+	$CanvasLayer/Host.queue_free()
 
 
 func _on_multiplayer_spawner_spawned(node: Node) -> void:
