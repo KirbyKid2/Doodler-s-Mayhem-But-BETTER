@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://jyvrun44khf0"]
+
+[ext_resource type="Script" uid="uid://ba7r0bteqtmtt" path="res://ASS ets/Player stuff/player_controller.gd" id="1_mbykm"]
+[ext_resource type="Texture2D" uid="uid://cvsj7ckwa6d3c" path="res://ASS ets/Sprites/testy cules.png" id="1_y82rh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6q6j"]
+size = Vector2(147, 261)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_mbykm"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="SmollTester" type="CharacterBody2D" unique_id=817398411]
+script = ExtResource("1_mbykm")
+
+[node name="TestyCules" type="Sprite2D" parent="." unique_id=694129735]
+position = Vector2(1, 0)
+scale = Vector2(0.14248365, 0.21591836)
+texture = ExtResource("1_y82rh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=950738844]
+position = Vector2(-17, -3)
+shape = SubResource("RectangleShape2D_b6q6j")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=167172216]
+replication_config = SubResource("SceneReplicationConfig_mbykm")

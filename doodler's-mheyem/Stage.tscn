@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cvantww04mrjj"]
+
+[ext_resource type="Script" uid="uid://b32fuq4lwumur" path="res://main.gd" id="1_4ubfd"]
+[ext_resource type="Texture2D" uid="uid://i6nk4rypar8b" path="res://ASS ets/Sprites/Platform oooo.png" id="2_gsjio"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6q6j"]
+size = Vector2(1283.5598, 381.03754)
+
+[node name="Main Game stuff" type="Node2D" unique_id=1034875407]
+script = ExtResource("1_4ubfd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1983234411]
+
+[node name="Host" type="Button" parent="CanvasLayer" unique_id=1183128214]
+offset_left = 41.0
+offset_top = 54.0
+offset_right = 433.0
+offset_bottom = 101.0
+text = "Idk start yo game yo phone linging start the game
+"
+
+[node name="Spawn" type="Node2D" parent="." unique_id=2105090070]
+position = Vector2(589, 110)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=306282268]
+_spawnable_scenes = PackedStringArray("uid://jyvrun44khf0")
+spawn_path = NodePath("..")
+
+[node name="PlatformOooo" type="Sprite2D" parent="." unique_id=702823517]
+position = Vector2(576, 478)
+scale = Vector2(0.5150327, 0.26061225)
+texture = ExtResource("2_gsjio")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlatformOooo" unique_id=1785218696]
+position = Vector2(31.06604, 149.64758)
+scale = Vector2(0.9999997, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformOooo/StaticBody2D" unique_id=924535502]
+position = Vector2(3.8832498, 0)
+scale = Vector2(1.0000001, 0.99999994)
+shape = SubResource("RectangleShape2D_b6q6j")
+
+[connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
+[connection signal="spawned" from="MultiplayerSpawner" to="." method="_on_multiplayer_spawner_spawned"]
