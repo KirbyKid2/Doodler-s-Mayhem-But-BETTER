@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ba7r0bteqtmtt" path="res://ASS ets/Player stuff/player_controller.gd" id="1_mbykm"]
 [ext_resource type="Texture2D" uid="uid://cvsj7ckwa6d3c" path="res://ASS ets/Sprites/testy cules.png" id="1_y82rh"]
+[ext_resource type="Texture2D" uid="uid://dqmcgpv0w2fyy" path="res://ASS ets/Sprites/bluey cules.png" id="3_m2vqm"]
+[ext_resource type="Texture2D" uid="uid://b5sjjcdevdtqm" path="res://ASS ets/Sprites/greeny cules.png" id="4_ehwx4"]
+[ext_resource type="Texture2D" uid="uid://b1vt8jut8xgv1" path="res://ASS ets/Sprites/redy cules.png" id="5_3685b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6q6j"]
 size = Vector2(147, 261)
@@ -27,3 +30,21 @@ shape = SubResource("RectangleShape2D_b6q6j")
 replication_config = SubResource("SceneReplicationConfig_mbykm")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1974398408]
+
+[node name="BlueyCules" type="Sprite2D" parent="." unique_id=334729742]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(0.142, 0.216)
+texture = ExtResource("3_m2vqm")
+
+[node name="GreenyCules" type="Sprite2D" parent="." unique_id=807527182]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(0.142, 0.216)
+texture = ExtResource("4_ehwx4")
+
+[node name="RedyCules" type="Sprite2D" parent="." unique_id=1241363671]
+visible = false
+position = Vector2(1, 0)
+scale = Vector2(0.142, 0.216)
+texture = ExtResource("5_3685b")
